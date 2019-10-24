@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'Berlingske Sans';
+    src:	url('./fonts/BerlingskeSans-Rg.eot');
+    src:	url('./fonts/BerlingskeSans-Rg.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/BerlingskeSans-Rg.woff2') format('woff2'),
+    url('./fonts/BerlingskeSans-Rg.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Berlingske Sans';
+    src:	url('./fonts/BerlingskeSans-Blk.eot');
+    src:	url('./fonts/BerlingskeSans-Blk.eot?#iefix') format('embedded-opentype');
+    src:	url('./fonts/BerlingskeSans-Blk.woff2')format('woff2'),
+    url('./fonts/BerlingskeSans-Blk.woff')format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+.cardgame {
+    width: 770px;
+    height: 450px;
+    margin: 100px auto;
+}
+
+.card {
+    font-family: 'Berlingske Sans', Arial, Helvetica, sans-serif;
+}
+
+.card-content {
+    width: 670px;
+    height: 450px;
+    padding: 50px;
+    position: relative;
+    background-color: #FFFFFF;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    border: 1px solid #aaa;
+}
+
+.card-content__type-padded {
+    width: 470px;
+    padding-right: 250px;
+}
+/*
+.card-content__type-0 {
+    background-image: url(../i/0.jpg);
+}
+
+.card-content__type-1 {
+    background-image: url(../i/1.jpg);
+}
+
+.card-content__type-2 {
+    background-image: url(../i/2.png);
+}
+
+.card-content__type-3 {
+    background-image: url(../i/3.png);
+}
+
+.card-content__type-4 {
+    background-image: url(../i/4.png);
+}
+
+.card-content__type-5 {
+    background-image: url(../i/5.png);
+}
+
+.card-content__type-6 {
+    background-image: url(../i/6.png);
+}
+
+.card-content__type-7 {
+    background-image: url(../i/7.png);
+}
+
+.card-content__type-8 {
+    background-image: url(../i/8.png);
+}
+
+.card-content__type-right {
+    background-image: url(../i/right.png);
+}
+
+.card-content__type-wrong {
+    background-image: url(../i/wrong.png);
+}
+*/
+.card-content__title {
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 900;
+    margin: 0 0 40px 0;
+}
+
+.card-content__type-padded  .card-content__title {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+}
+
+.card-content__text {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.card-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+.card-step {
+    position: absolute;
+    top: 8px;
+    width: auto;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+
+}
+
+.card-button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #bbb;
+}
+
+.card-button:hover {
+    background: #aaa;
+    color: #FFFFFF;
+}
+
+.card-content_variants {
+    padding: 0;
+    width: 450px;
+    list-style: none;
+    font-size: 16px;
+    line-height: 22px;
+    counter-reset: list;
+}
+
+
+.card-content__type-4 .card-content_variants {
+    width: 200px
+}
+
+.card-content__type-1 .card-content_variants,
+.card-content__type-5 .card-content_variants {
+    width: 350px
+}
+
+.card-content_variant {
+    margin: 0 0 10px 0;
+
+}
+
+.card-content_variant:last-child {
+    margin: 0;
+}
+
+.card-content_variant a {
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #999;
+
+    padding: 5px 10px;
+    display: block;
+    background: #bbb;
+}
+
+
+
+.card-content_variant a:hover {
+    color: #FFFFFF;
+    border-color: #777;
+    background: #aaa;;
+
+}
+
+.card-content_variant a:before {
+    counter-increment: list;
+    content: counter(list) ". ";
+}
+
