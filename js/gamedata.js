@@ -238,7 +238,7 @@ var gameData = {
                     profit: 7
                 },
                 nextQuestion: 'result',
-                id: 4,
+                id: 5,
                 type: 'right'
             },
             2: {
@@ -248,7 +248,7 @@ var gameData = {
                     profit: 5
                 },
                 nextQuestion: 'result',
-                id: 4,
+                id: 5,
                 type: 'right'
             },
             3: {
@@ -258,7 +258,7 @@ var gameData = {
                     profit: -50
                 },
                 nextQuestion: 'result',
-                id: 4,
+                id: 5,
                 type: 'fail'
             }
         }

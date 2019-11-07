@@ -72,8 +72,6 @@
     margin: 0 0 10px;
 }
 
-
-
 .card-content__img {
     position: absolute;
     bottom: 0;
@@ -81,7 +79,7 @@
 }
 
 .card-content__type-0 .card-content__img {
-    width: 720px;
+    width: 718px;
     height: 242px;
     background: url(../i/0.png) no-repeat 0 0;
 }
