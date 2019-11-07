@@ -12,7 +12,7 @@ jQuery.fn.cardGame = function(data) {
         $back = $("#card-back", $card),
         questionTmpl = _.template($("#question__tmpl").html()),
         answerTmpl = _.template($("#answer__tmpl").html()),
-        _balance = 50,
+        _balance = 100,
         _profit = 0;
 
     function updateResult(answer) {

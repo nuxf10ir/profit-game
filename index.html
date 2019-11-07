@@ -13,7 +13,7 @@
                 <div class="cardgame__in">
                     <div id="card" class="card">
                         <div id="card-front" class="front">
-                            <div class="card-content">
+                            <div class="card-content-loader">
                                 <div class="lds-css ng-scope">
                                     <div class="lds-ripple">
                                         <div></div>
@@ -28,16 +28,27 @@
                                     Деловая игра: Выжить в битве с коммерсантами
                                 </div>
                                 <div class="card-content__text">
-                                    Роман Абромович, купил компанию &laquo;Альфа&raquo; и&nbsp;пригласил Вас на&nbsp;должность финансового директора.
-                                    Коммерческий директор компании &laquo;Альфа&raquo; Марк Петров, тоже новичок в&nbsp;компании.
-                                    Но&nbsp;у&nbsp;него есть преимущество&nbsp;&mdash; его папа учился вместе с&nbsp;Романом Аркадиевичем и&nbsp;он&nbsp;считает его своим человеком в&nbsp;фирме.
-                                    Первая задача, которую вы&nbsp;получили с&nbsp;коммерческим директором от&nbsp;нового руководства &mdash;
-                                    увеличить прибыль компании в&nbsp;2020 году на&nbsp;7%, то&nbsp;есть ХХХ руб..
-                                    Марк, взялся за&nbsp;работу, и&nbsp;новые клиенты потекли рекой.
-                                    Но&nbsp;когда вы&nbsp;просчитали рентабельность этих сделок, оказалось не&nbsp;все так радужно.
-                                    Итак начнем, Ваша задача избежать кассовых разрывов и&nbsp;увеличить прибыль!
-                                    Но&nbsp;помните, иногда даже рискованные клиенты могут оплатить все в&nbsp;срок, а&nbsp;надежные обанкротиться.
+                                    <p>
+                                        Роман Абромович, купил компанию &laquo;Альфа&raquo; и&nbsp;пригласил Вас на&nbsp;должность финансового
+                                        директора. Коммерческий директор компании &laquo;Альфа&raquo; Марк Петров, тоже новичок
+                                        в&nbsp;компании. Но&nbsp;у&nbsp;него есть преимущество&nbsp;&mdash; его папа учился вместе с&nbsp;Романом
+                                        Аркадиевичем и&nbsp;он&nbsp;считает его своим человеком в&nbsp;фирме.
+                                    </p>
+                                    <p>
+                                        Первая задача, которую вы&nbsp;получили с&nbsp;коммерческим директором от&nbsp;нового
+                                        руководства &mdash; увеличить прибыль компании в&nbsp;2020 году на&nbsp;7%.
+                                    </p>
+                                    <p>
+                                        Марк, взялся за&nbsp;работу, и&nbsp;новые клиенты потекли рекой. Но&nbsp;когда вы&nbsp;просчитали
+                                        рентабельность этих сделок, оказалось не&nbsp;все так радужно.
+                                    </p>
+                                    <p>
+                                        Итак начнем, Ваша задача избежать кассовых разрывов и&nbsp;увеличить прибыль! Но&nbsp;
+                                        помните, иногда даже рискованные клиенты могут оплатить все в&nbsp;срок, а&nbsp;
+                                        надежные обанкротиться.
+                                    </p>
                                 </div>
+                                <div class="card-content__img"></div>
                             </div>
                             <div class="card-footer">
                                 <a class="card-button js-to-question" data-question="1">Начать игру</a>
@@ -61,24 +72,31 @@
         <div class="card-content card-content__type-{{id}} card-content__type-padded">
 
             <div class="card-step">
-                <span class="card-step__in">Шаг {{id}} из 8</span>
-                <span class=""card-step__balance">Баланс: {{balance}} млн. руб.</span>
-                <span class=""card-step__profit">Прибыль: {{profit}}/XXX млн. руб.</span>
-            </div>
+                <div class="card-step__in">Шаг {{id}} из 8</div>
+                <div class="card-step__sub">
+                    <span class=""card-step__balance">Баланс: {{(balance/10).toFixed(1)}} млн. руб.</span>
+                    <span class=""card-step__profit">Прибыль: {{(profit/10).toFixed(1)}}/0,7 млн. руб.</span>
+                </div>
 
-            <div class="card-content__title">
-                {{text}}
             </div>
-            <div class="card-content__text">
-                <ol class="card-content_variants">
-                    {[ _.each(variants, function(variant) { ]}
-                        <li class="card-content_variant">
-                            <a class="js-to-answer" data-answer="{{variant.answerId}}" data-question="{{id}}">
-                                {{variant.text}}
-                            </a>
-                        </li>
-                    {[ }); ]}
-                </ol>
+            <div class="card-content__wrapper">
+                <div class="card-content__wrapper-in">
+                    <div class="card-content__title">
+                        {{text}}
+                    </div>
+                    <div class="card-content__text">
+                        <ol class="card-content_variants">
+                            {[ _.each(variants, function(variant) { ]}
+                                <li class="card-content_variant">
+                                    <a class="js-to-answer" data-answer="{{variant.answerId}}" data-question="{{id}}">
+                                        {{variant.text}}
+                                    </a>
+                                </li>
+                            {[ }); ]}
+                        </ol>
+                    </div>
+                </div>
+                <div class="card-content__img"></div>
             </div>
         </div>
     </script>
@@ -86,17 +104,21 @@
 
     <script id="answer__tmpl" type="text/x-javascript-tmpl">
 
-        <div class="card-content card-content__type-next">
+        <div class="card-content card-content__type-next card-content__type-{{type}}">
 
             <div class="card-step">
-                <span class=""card-step__balance">Баланс: {{balance}} млн. руб.</span>
-                <span class=""card-step__profit">Прибыль: {{profit}}/XXX млн. руб.</span>
+                <div class="card-step__in">Шаг {{id}} из 8</div>
+                <div class="card-step__sub">
+                    <span class=""card-step__balance">Баланс: {{(balance/10).toFixed(1)}} млн. руб.</span>
+                    <span class=""card-step__profit">Прибыль: {{(profit/10).toFixed(1)}}/0,7 млн. руб.</span>
+                </div>
             </div>
 
 
             <div class="card-content__text">
                 {{text}}
             </div>
+            <div class="card-content__img"></div>
         </div>
         <div class="card-footer">
             <a class="card-button js-to-question" data-question="{{nextQuestion}}">
