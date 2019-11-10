@@ -72,6 +72,10 @@
     margin: 0 0 10px;
 }
 
+.card-content__type-padded.card-content__type-3  .card-content__title {
+    margin-right: -140px;
+}
+
 .card-content__img {
     position: absolute;
     bottom: 0;
@@ -99,8 +103,8 @@
 
 
 .card-content__type-3 .card-content__img {
-    width: 444px;
-    height: 344px;
+    width: 410px;
+    height: 300px;
     background: url(../i/3.png) no-repeat 0 0;
 }
 
@@ -128,49 +132,24 @@
     background: url(../i/right.png) no-repeat 0 0;
 }
 
-    /*
+.card-content__type-result.card-content__type-low .card-content__img {
+    width: 479px;
+    height: 326px;
+    background: url(../i/low.png) no-repeat 0 0;
+}
 
+.card-content__type-result.card-content__type-medium .card-content__img {
+    width: 393px;
+    height: 362px;
+    background: url(../i/medium.png) no-repeat 0 0;
+}
 
-    .card-content__type-1 {
-        background-image: url(../i/1.jpg);
-    }
+.card-content__type-result.card-content__type-high .card-content__img {
+    width: 500px;
+    height: 337px;
+    background: url(../i/high.png) no-repeat 0 0;
+}
 
-    .card-content__type-2 {
-        background-image: url(../i/2.png);
-    }
-
-    .card-content__type-3 {
-        background-image: url(../i/3.png);
-    }
-
-    .card-content__type-4 {
-        background-image: url(../i/4.png);
-    }
-
-    .card-content__type-5 {
-        background-image: url(../i/5.png);
-    }
-
-    .card-content__type-6 {
-        background-image: url(../i/6.png);
-    }
-
-    .card-content__type-7 {
-        background-image: url(../i/7.png);
-    }
-
-    .card-content__type-8 {
-        background-image: url(../i/8.png);
-    }
-
-    .card-content__type-right {
-        background-image: url(../i/right.png);
-    }
-
-    .card-content__type-wrong {
-        background-image: url(../i/wrong.png);
-    }
-    */
 .card-content__title {
     font-size: 26px;
     line-height: 32px;
@@ -244,7 +223,8 @@
     width: 350px;
 }
 
-.card-content__type-2 .card-content_variants {
+.card-content__type-2 .card-content_variants,
+.card-content__type-3 .card-content_variants {
     width: 250px;
 }
 
